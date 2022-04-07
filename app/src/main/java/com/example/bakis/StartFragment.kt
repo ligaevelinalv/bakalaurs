@@ -1,6 +1,7 @@
 package com.example.bakis
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -37,15 +38,24 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSNext.setOnClickListener {
+            viewModel.setAnswers(generateData())
+            Log.i("aa", "Data generated")
             findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
             //Log.i("aa", binding.questionbox.text.toString())
-            viewModel.setQ(binding.questionbox.text.toString())
+//            viewModel.setQ(binding.questionbox.text.toString())
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun generateData(): MutableList<Answer> {
+        val answer1 = Answer(true, 2, 3 )
+        val list = mutableListOf<Answer>(answer1)
+
+        return list
     }
 
 }

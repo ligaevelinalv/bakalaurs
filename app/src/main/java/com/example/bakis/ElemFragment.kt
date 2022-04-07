@@ -1,6 +1,7 @@
 package com.example.bakis
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -39,12 +40,23 @@ class ElemFragment : Fragment() {
         //binding.textviewSecond.text = viewModel.getQ()
 
         binding.buttonENext.setOnClickListener {
-            findNavController().navigate(R.id.action_ElemFragment_to_ElemQuestionFragment)
+            getList()
+            //findNavController().navigate(R.id.action_ElemFragment_to_ElemQuestionFragment)
         }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    fun getList() {
+        val list = viewModel.getAnswers()
+
+        if (list != null) {
+            for (item in list) {
+                Log.i("aa", "${item.withOrWithout} + ${item.answer1} + ${item.answer2} ")
+            }
+        }
     }
 }
