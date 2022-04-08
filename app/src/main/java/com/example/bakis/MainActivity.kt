@@ -1,12 +1,14 @@
 package com.example.bakis
 
 import android.os.Bundle
+import android.view.MenuItem
+import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
-import androidx.activity.viewModels
 import com.example.bakis.databinding.ActivityMainBinding
 import com.example.bakis.model.ExpViewModel
 
@@ -39,5 +41,24 @@ class MainActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_main)
         return navController.navigateUp(appBarConfiguration)
                 || super.onSupportNavigateUp()
+    }
+
+    override fun onBackPressed() {
+        //super.onBackPressed()
+
+        val text = "No going back for you!"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val text = "No going back for you!"
+        val duration = Toast.LENGTH_SHORT
+
+        val toast = Toast.makeText(applicationContext, text, duration)
+        toast.show()
+        return true
     }
 }

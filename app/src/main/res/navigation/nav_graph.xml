@@ -35,7 +35,8 @@
             app:destination="@id/navTaskFragment" />
         <action
             android:id="@+id/action_ElemQuestionFragment_to_ElemFragment"
-            app:destination="@id/ElemFragment" />
+            app:destination="@id/ElemFragment"
+            app:popUpTo="@id/ElemFragment" />
     </fragment>
     <fragment
         android:id="@+id/navTaskFragment"
