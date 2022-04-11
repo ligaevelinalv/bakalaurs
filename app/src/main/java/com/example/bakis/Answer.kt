@@ -1,7 +1,7 @@
 package com.example.bakis
 
 data class Answer (
-    var withOrWithout: Boolean? = null,
-    var answer1: Int = 0,
-    var answer2: Int = 0
+    var solutionUsed: Boolean? = null,
+    var categoryAnswer: Int = 0,
+    var specificAnswer: Int = 0
 )

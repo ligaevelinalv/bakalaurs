@@ -17,7 +17,10 @@ class ExpViewModel : ViewModel() {
         return answerList.value
     }
 
-    fun setAnswers(list: MutableList<Answer>) {
+    fun setAnswers(answer: Answer) {
+
+        val list = mutableListOf(answer)
+
         if (answerList.value != null) {
             val temp = answerList.value!!
             temp.addAll(list)

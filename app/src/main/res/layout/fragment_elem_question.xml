@@ -1,55 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ElemQuestionFragment">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_eq_next"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:context=".ElemQuestionFragment">
 
-    <TextView
-        android:id="@+id/text_eq_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="Title" />
+        <Button
+            android:id="@+id/button_eq_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_eq_spec" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_eq_1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        app:cardCornerRadius="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text_eq_title">
+        <TextView
+            android:id="@+id/text_eq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_eq_cat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_eq_title">
 
             <RadioGroup
+                android:id="@+id/radio_group_eq_cat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
-                    android:id="@+id/text_eq_q1"
+                    android:id="@+id/text_eq_cat_warn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    tools:text="fssfdfsdsdfsdfsdfsdfsdfsdf"
-                    android:layout_marginStart="16dp"/>
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#EC4141"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    tools:text="BAD"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_eq_catq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="fssfdfsdsdfsdfsdfsdfsdfsdf" />
 
                 <RadioButton
                     android:id="@+id/radio_eq_cat1"
@@ -57,24 +81,28 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     tools:text="RadioButton" />
+
                 <RadioButton
                     android:id="@+id/radio_eq_cat2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     tools:text="RadioButton" />
+
                 <RadioButton
                     android:id="@+id/radio_eq_cat3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     tools:text="RadioButton" />
+
                 <RadioButton
                     android:id="@+id/radio_eq_cat4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
                     tools:text="RadioButton" />
+
                 <RadioButton
                     android:id="@+id/radio_eq_cat5"
                     android:layout_width="wrap_content"
@@ -82,7 +110,84 @@
                     android:layout_marginStart="16dp"
                     tools:text="RadioButton" />
             </RadioGroup>
+        </androidx.cardview.widget.CardView>
 
-    </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_eq_spec"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:cardCornerRadius="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_eq_cat">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <RadioGroup
+                android:id="@+id/radio_group_eq_spec"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_eq_spec_warn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:visibility="gone"
+                    android:textColor="#EC4141"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    tools:text="BAD"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_eq_specq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="fssfdfsdsdfsdfsdfsdfsdfsdf" />
+
+                <RadioButton
+                    android:id="@+id/radio_eq_spec1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_eq_spec2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_eq_spec3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_eq_spec4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_eq_spec5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    tools:text="RadioButton" />
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

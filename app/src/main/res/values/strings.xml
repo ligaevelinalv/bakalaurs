@@ -18,8 +18,8 @@
     <string name="e1_cat">Pilnībā uztverams</string>
     <string name="e2_cat">Drīzāk uztverams</string>
     <string name="e3_cat">Neesmu pārlicināta/s</string>
-    <string name="e4_cat">Drīzāk uztverams</string>
-    <string name="e5_cat">Pilnībā uztverams</string>
+    <string name="e4_cat">Drīzāk neuztverams</string>
+    <string name="e5_cat">Pilnībā neuztverams</string>
 
     <string name="e1_q">Vai teksta burtu izmērs ir pietiekams vieglai uztverei?</string>
     ----------------------------------------------
