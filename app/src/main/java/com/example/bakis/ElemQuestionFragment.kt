@@ -24,7 +24,7 @@ class ElemQuestionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
 
         _binding = FragmentElemQuestionBinding.inflate(inflater, container, false)
         return binding.root
@@ -36,10 +36,22 @@ class ElemQuestionFragment : Fragment() {
 
         var text = viewModel.getcurrentQuestion().toString()
         text = "Jautājumi par $text.elementu"
+
         binding.textEqTitle.text = text
 
+        //category
+        binding.textEqQ1.text = resources.getText(viewModel.getQuestion(true))
+        binding.radioEqCat1.text = resources.getText(viewModel.getAnswer(true, 1))
+        binding.radioEqCat2.text = resources.getText(viewModel.getAnswer(true, 2))
+        binding.radioEqCat3.text = resources.getText(viewModel.getAnswer(true, 3))
+        binding.radioEqCat4.text = resources.getText(viewModel.getAnswer(true, 4))
+        binding.radioEqCat5.text = resources.getText(viewModel.getAnswer(true, 5))
+
+        //specific
+
+
         binding.buttonEqNext.setOnClickListener {
-            viewModel.setAnswers(generateData())
+            //viewModel.setAnswers(generateData())
             findNavController().navigate(R.id.action_ElemQuestionFragment_to_ElemFragment)
         }
     }
@@ -47,12 +59,5 @@ class ElemQuestionFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-        fun generateData(): MutableList<Answer> {
-        val answer1 = Answer(true, 2, 3 )
-        val list = mutableListOf<Answer>(answer1)
-
-        return list
     }
 }

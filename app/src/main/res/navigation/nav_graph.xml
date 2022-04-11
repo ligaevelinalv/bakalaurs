@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/ElemFragment"
         android:name="com.example.bakis.ElemFragment"
-        android:label="1.jautājums"
+        android:label="Jautājums par elementu"
         tools:layout="@layout/fragment_elem">
 
         <action
@@ -28,7 +28,7 @@
     <fragment
         android:id="@+id/ElemQuestionFragment"
         android:name="com.example.bakis.ElemQuestionFragment"
-        android:label="2.jautājums"
+        android:label="Novērtējums"
         tools:layout="@layout/fragment_elem_question" >
         <action
             android:id="@+id/action_ElemQuestionFragment_to_navTaskFragment"
@@ -41,7 +41,7 @@
     <fragment
         android:id="@+id/navTaskFragment"
         android:name="com.example.bakis.NavTaskFragment"
-        android:label="fragment_nav_task"
+        android:label="Navigācijas uzdevums"
         tools:layout="@layout/fragment_nav_task" >
         <action
             android:id="@+id/action_navTaskFragment_to_navClutterFragment"
@@ -56,7 +56,7 @@
     <fragment
         android:id="@+id/navClutterFragment"
         android:name="com.example.bakis.NavClutterFragment"
-        android:label="fragment_nav_clutter"
+        android:label="1.uzdevums"
         tools:layout="@layout/fragment_nav_clutter" >
         <action
             android:id="@+id/action_navClutterFragment_to_navEndFragment"
@@ -65,7 +65,7 @@
     <fragment
         android:id="@+id/navIconFragment"
         android:name="com.example.bakis.NavIconFragment"
-        android:label="fragment_nav_icon"
+        android:label="2.uzdevums"
         tools:layout="@layout/fragment_nav_icon" >
         <action
             android:id="@+id/action_navIconFragment_to_navEndFragment"
@@ -74,7 +74,7 @@
     <fragment
         android:id="@+id/navScrollFragment"
         android:name="com.example.bakis.NavScrollFragment"
-        android:label="fragment_nav_scroll"
+        android:label="3.uzdevums"
         tools:layout="@layout/fragment_nav_scroll" >
         <action
             android:id="@+id/action_navScrollFragment_to_navEndFragment2"
@@ -83,7 +83,7 @@
     <fragment
         android:id="@+id/navEndFragment"
         android:name="com.example.bakis.NavEndFragment"
-        android:label="fragment_nav_end"
+        android:label="Uzdevums izpildīts"
         tools:layout="@layout/fragment_nav_end" >
         <action
             android:id="@+id/action_navEndFragment_to_navQuestionFragment"
@@ -92,7 +92,7 @@
     <fragment
         android:id="@+id/navQuestionFragment"
         android:name="com.example.bakis.NavQuestionFragment"
-        android:label="fragment_nav_question"
+        android:label="Novērtējums"
         tools:layout="@layout/fragment_nav_question" >
         <action
             android:id="@+id/action_navQuestionFragment_to_hapTaskFragment"
@@ -104,7 +104,7 @@
     <fragment
         android:id="@+id/hapTaskFragment"
         android:name="com.example.bakis.HapTaskFragment"
-        android:label="fragment_hap_task"
+        android:label="Uzdevums haptiskajai reakcijai"
         tools:layout="@layout/fragment_hap_task" >
         <action
             android:id="@+id/action_hapTaskFragment_to_hapFragment"
@@ -113,7 +113,7 @@
     <fragment
         android:id="@+id/hapFragment"
         android:name="com.example.bakis.HapFragment"
-        android:label="fragment_hap"
+        android:label="Uzdevums"
         tools:layout="@layout/fragment_hap" >
         <action
             android:id="@+id/action_hapFragment_to_hapEndFragment"
@@ -122,7 +122,7 @@
     <fragment
         android:id="@+id/hapQuestionFragment"
         android:name="com.example.bakis.HapQuestionFragment"
-        android:label="fragment_hap_question"
+        android:label="Novērtējums"
         tools:layout="@layout/fragment_hap_question" >
         <action
             android:id="@+id/action_hapQuestionFragment_to_endFragment"
@@ -131,7 +131,7 @@
     <fragment
         android:id="@+id/hapEndFragment"
         android:name="com.example.bakis.HapEndFragment"
-        android:label="fragment_hap_end"
+        android:label="Uzdevums izpildīts"
         tools:layout="@layout/fragment_hap_end" >
         <action
             android:id="@+id/action_hapEndFragment_to_hapQuestionFragment"
@@ -140,6 +140,6 @@
     <fragment
         android:id="@+id/endFragment"
         android:name="com.example.bakis.EndFragment"
-        android:label="fragment_end"
+        android:label="Eksperiments pabeigts"
         tools:layout="@layout/fragment_end" />
 </navigation>

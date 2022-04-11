@@ -6,66 +6,90 @@
     <string name="previous">Previous</string>
     <string name="error">Error</string>
 
-    <string name="start_text">Pētījumā redzēsiet dažādus saskarnes elementu piemērus, kā arī uzdevumus,
+    <string name="start_text">
+        Pētījumā redzēsiet dažādus saskarnes elementu piemērus, kā arī uzdevumus,
         kuros nepieciešams izpildīt kādu darbību.
         Pēc elementa aplūkošanas vai darbības izpildīšanas atzīmējat,
         lūdzu, kura no piedāvātajām atbildēm Jūsuprāt ir visatbilstošākā.</string>
 
-    <string name="e_q1">Skalā 1–5, cik viegli uztverams bija teksts, ko tikko izlasījāt?</string>
-        <string name="e1_q2">Vai teksta burtu izmērs ir pietiekams vieglai uztverei?</string>
-        <string name="e2_q2">Vai tekstā bija saprotams, kuriem vārdiem ir paredzēts būt uzsvērtiem?</string>
-        <string name="e3_q2">Vai tekstā bija saprotams, kurai frāzei ir paredzēts būt uzsvērtai?</string>
-        <string name="e4_q2">Vai teksta fonts sarežģīja/ atviegloja teksta lasīšanu?</string>
-        <string name="e5_q2">Vai attālums starp rindām sarežģīja/ atviegloja teksta lasīšanu?</string>
-        <string name="e6_q2">Vai elementu tuvums/ attālums vienam no otra ir apmierinošs?</string>
+    //ELEMENT CATEGORY//
+    <string name="e_cat">Cik viegli uztverams bija teksts, ko tikko izlasījāt?</string>
+    ----------------------------------------------
+    <string name="e1_cat">Pilnībā uztverams</string>
+    <string name="e2_cat">Drīzāk uztverams</string>
+    <string name="e3_cat">Neesmu pārlicināta/s</string>
+    <string name="e4_cat">Drīzāk uztverams</string>
+    <string name="e5_cat">Pilnībā uztverams</string>
 
-    <string name="n_q1">Skalā 1–5, cik uztverama ir navigācija uzdevumam, ko tikko izpildījāt?</string>
-        <string name="n2_q2">Vai bija viegli atrast pareizo navigācijas pogu?</string>
-        <string name="n2_n3_q2">Vai bija viegli navigēt uz pareizo skatu?</string>
+    <string name="e1_q">Vai teksta burtu izmērs ir pietiekams vieglai uztverei?</string>
+    ----------------------------------------------
+    <string name="e1_a1">Pilnībā pietiekams</string>
+    <string name="e1_a2">Drīzāk pietiekams</string>
+    <string name="e1_a3">Neesmu pārlicināta/s</string>
+    <string name="e1_a4">Drīzāk nepieteikams</string>
+    <string name="e1_a5">Pilnībā nepietiekams</string>
 
-    <string name="h_q1">Skalā 1–5, cik uztverama ir lietotnes atbildes reakcija uz darbību uzdevumam, ko tikko izpildījāt?</string>
-        <string name="h_q2">Vai ietotnes atbildes reakcija uz darbību uzdevumam ir pietiekama?</string>
+    <string name="e2_q">Vai tekstā bija saprotams, kuriem vārdiem ir paredzēts būt uzsvērtiem?</string>
+    <string name="e3_q">Vai tekstā bija saprotams, kurai frāzei ir paredzēts būt uzsvērtai?</string>
+    ----------------------------------------------
+    <string name="e2_e3_a1">Pilnībā saprotams</string>
+    <string name="e2_e3_a2">Drīzāk saprotams</string>
+    <string name="e2_e3_a3">Neesmu pārlicināta/s</string>
+    <string name="e2_e3_a4">Drīzāk nesaprotams</string>
+    <string name="e2_e3_a5">Pilnībā nesaprotams</string>
 
-    <string-array name="e1_a">
-        <item name="e1_a1">Ir pieteikams</item>
-        <item name="e1_a2">Neesmu pārlicināta/s</item>
-        <item name="e1_a3">Nav pietiekams</item>
-    </string-array>
+    <string name="e4_q">Vai teksta fonts sarežģīja/ atviegloja teksta lasīšanu?</string>
+    <string name="e5_q">Vai attālums starp rindām sarežģīja/ atviegloja teksta lasīšanu?</string>
+    ----------------------------------------------
+    <string name="e4_e5_a1">Sarežģīja lasīšanu</string>
+    <string name="e4_e5_a2">Drīzāk sarežģīja lasīšanu</string>
+    <string name="e4_e5_a3">Neesmu pārlicināta/s</string>
+    <string name="e4_e5_a4">Drīzāk nesarežģīja lasīšanu</string>
+    <string name="e4_e5_a5">Nesarežģīja lasīšanu</string>
 
-    <string-array name="e2_e3_a">
-        <item name="e2_e3_a1">Bija saprotams</item>
-        <item name="e2_e3_a2">Neesmu pārlicināta/s</item>
-        <item name="e2_e3_a3">Nebija saprotams</item>
-    </string-array>
+    <string name="e6_q">Vai elementu tuvums/ attālums vienam no otra ir apmierinošs?</string>
+    ----------------------------------------------
+    <string name="e6_a1">Pilnībā apmierinošs</string>
+    <string name="e6_a2">Drīzāk apmierinošs</string>
+    <string name="e6_a3">Neesmu pārlicināta/s</string>
+    <string name="e6_a4">Drīzāk neapmierinošs</string>
+    <string name="e6_a5">Pilnībā neapmierinošs</string>
 
-    <string-array name="e4_e5_a">
-        <item name="e4_e5_a1">Sarežģīja lasīšanu</item>
-        <item name="e4_e5_a2">Neesmu pārlicināta/s</item>
-        <item name="e4_e5_a3">Nesarežģīja lasīšanu</item>
-    </string-array>
+    //NAVIGATION CATEGORY//
+    <string name="n_cat">Cik uztverama ir navigācija uzdevumam, ko tikko izpildījāt?</string>
+    ----------------------------------------------
+    <string name="n1_h1_cat">Pilnībā uztverama</string>
+    <string name="n2_h2_cat">Drīzāk uztverama</string>
+    <string name="n3_h3_cat">Neesmu pārlicināta/s</string>
+    <string name="n4_h4_cat">Drīzāk uztverama</string>
+    <string name="n5_h5_cat">Pilnībā uztverama</string>
 
-    <string-array name="e6_a">
-        <item name="e6_a1">Ir apmierinošs</item>
-        <item name="e6_a2">Neesmu pārlicināta/s</item>
-        <item name="e6_a3">Nav apmierinošs</item>
-    </string-array>
+    <string name="n1_q">Vai bija viegli atrast pareizo navigācijas pogu?</string>
+    ----------------------------------------------
+    <string name="n1_a1">Atrast bija viegli</string>
+    <string name="n1_a2">Atrast bija drīzāk viegli</string>
+    <string name="n1_a3">Neesmu pārlicināta/s</string>
+    <string name="n1_a4">Atrast bija drīzāk grūti</string>
+    <string name="n1_a5">Atrast bija grūti</string>
 
-    <string-array name="n1_a">
-        <item name="n1_a1">Atrast bija viegli</item>
-        <item name="n1_a2">Neesmu pārlicināta/s</item>
-        <item name="n1_a3">Atrast bija grūti</item>
-    </string-array>
+    <string name="n2_n3_q">Vai bija viegli navigēt uz pareizo skatu?</string>
+    ----------------------------------------------
+    <string name="n2_n3_a1">Navigēt bija viegli</string>
+    <string name="n2_n3_a2">Navigēt bija drīzāk viegli</string>
+    <string name="n2_n3_a3">Neesmu pārlicināta/s</string>
+    <string name="n2_n3_a4">Navigēt bija drīzāk viegli</string>
+    <string name="n2_n3_a5">Navigēt bija grūti</string>
 
-    <string-array name="n2_n3_a">
-        <item name="n2_n3_a1">Navigēt bija viegli</item>
-        <item name="n2_n3_a2">Neesmu pārlicināta/s</item>
-        <item name="n2_n3_a3">Navigēt bija grūti</item>
-    </string-array>
+    //HAPTIC CATEGORY//
+    <string name="h_cat">Cik uztverama ir lietotnes atbildes reakcija uz darbību uzdevumam, ko tikko izpildījāt?</string>
+    //same answer as "n_cat"
 
-    <string-array name="h_a">
-        <item name="h_a1">Bija pietiekama</item>
-        <item name="h_a2">Neesmu pārlicināta/s</item>
-        <item name="h_a3">Nebija pietiekama</item>
-    </string-array>
+    <string name="h_q">Vai lietotnes atbildes reakcija uz darbību uzdevumam ir pietiekama?</string>
+    ----------------------------------------------
+    <string name="h_a1">Bija pietiekama</string>
+    <string name="h_a2">Drīzāk pietiekama</string>
+    <string name="h_a3">Neesmu pārlicināta/s</string>
+    <string name="h_a4">Drīzāk nepietiekama</string>
+    <string name="h_a5">Bija nepietiekama</string>
 
 </resources>
