@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/StartFragment"
         android:name="com.example.bakis.StartFragment"
-        android:label="Vizuālās uztveres tests"
+        android:label="ll18057 Bakalaura darbs"
         tools:layout="@layout/fragment_start">
 
         <action
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/ElemFragment"
         android:name="com.example.bakis.ElemFragment"
-        android:label="Jautājums par elementu"
+        android:label="Elements"
         tools:layout="@layout/fragment_elem">
 
         <action
