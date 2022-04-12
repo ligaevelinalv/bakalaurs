@@ -1,16 +1,18 @@
 package com.example.bakis
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RadioGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bakis.R.color.warning
 import com.example.bakis.databinding.FragmentElemQuestionBinding
 import com.example.bakis.model.ExpViewModel
-
+import kotlin.properties.Delegates
 
 class ElemQuestionFragment : Fragment() {
 
@@ -19,6 +21,9 @@ class ElemQuestionFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel: ExpViewModel by activityViewModels()
+
+    private var isCatChecked = false
+    private var isSpecChecked = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -57,6 +62,20 @@ class ElemQuestionFragment : Fragment() {
         binding.buttonEqNext.setOnClickListener {
             onButtonClick()
         }
+
+        binding.radioGroupEqCat.setOnCheckedChangeListener { _, _ ->
+            isCatChecked = true
+
+            binding.textEqCatWarn.visibility = View.GONE
+            binding.radioGroupEqCat.background = getResources().getDrawable(R.drawable.cardview__no_background)
+        }
+
+        binding.radioGroupEqSpec.setOnCheckedChangeListener { _, _ ->
+            isSpecChecked = true
+
+            binding.textEqSpecWarn.visibility = View.GONE
+            binding.radioGroupEqSpec.background = getResources().getDrawable(R.drawable.cardview__no_background)
+        }
     }
 
     override fun onDestroyView() {
@@ -68,10 +87,10 @@ class ElemQuestionFragment : Fragment() {
 
         var selectedCatRadio = 0
         var selectedSpecRadio = 0
-        val selectedCat = binding.radioGroupEqCat.checkedRadioButtonId
-        val selectedSpec = binding.radioGroupEqSpec.checkedRadioButtonId
+        var selectedCat = binding.radioGroupEqCat.checkedRadioButtonId
+        var selectedSpec = binding.radioGroupEqSpec.checkedRadioButtonId
 
-        if (selectedCat!= -1) {
+        if (selectedCat != -1) {
             when (selectedCat) {
                 R.id.radio_eq_cat1 -> selectedCatRadio = 1
                 R.id.radio_eq_cat2 -> selectedCatRadio = 2
@@ -79,38 +98,31 @@ class ElemQuestionFragment : Fragment() {
                 R.id.radio_eq_cat4 -> selectedCatRadio = 4
                 R.id.radio_eq_cat5 -> selectedCatRadio = 5
             }
-        }
-
-        if (binding.textEqCatWarn.visibility == View.INVISIBLE) {
-        binding.cardViewEqCat.setBackgroundColor(resources.getColor(warning))
-        binding.textEqCatWarn.text = "Lūdzu izvēlieties atbilžu variantu!"
-        binding.textEqCatWarn.visibility = View.VISIBLE
         } else {
-            binding.cardViewEqCat.setBackgroundColor(resources.getColor(R.color.white))
-            binding.textEqCatWarn.visibility = View.INVISIBLE
+            binding.textEqCatWarn.visibility = View.VISIBLE
+            binding.radioGroupEqCat.background = getResources().getDrawable(R.drawable.cardview_background)
         }
 
-        if (selectedSpec!= -1) {
+        if (selectedSpec != -1) {
             when (selectedSpec) {
-                R.id.radio_eq_spec1 ->  selectedSpecRadio = 1
-                R.id.radio_eq_spec2 ->  selectedSpecRadio = 2
-                R.id.radio_eq_spec3 ->  selectedSpecRadio = 3
-                R.id.radio_eq_spec4 ->  selectedSpecRadio = 4
-                R.id.radio_eq_spec5 ->  selectedSpecRadio = 5
+                R.id.radio_eq_spec1 -> selectedSpecRadio = 1
+                R.id.radio_eq_spec2 -> selectedSpecRadio = 2
+                R.id.radio_eq_spec3 -> selectedSpecRadio = 3
+                R.id.radio_eq_spec4 -> selectedSpecRadio = 4
+                R.id.radio_eq_spec5 -> selectedSpecRadio = 5
             }
-
-            viewModel.setAnswers(Answer(true, selectedCatRadio, selectedSpecRadio))
-            findNavController().navigate(R.id.action_ElemQuestionFragment_to_ElemFragment)
-
-        }
-
-        if (binding.textEqSpecWarn.visibility == View.INVISIBLE) {
-            binding.cardViewEqSpec.setBackgroundColor(resources.getColor(warning))
-            binding.textEqSpecWarn.text = "Lūdzu izvēlieties atbilžu variantu!"
-            binding.textEqSpecWarn.visibility = View.VISIBLE
         } else {
-            binding.cardViewEqSpec.setBackgroundColor(resources.getColor(R.color.white))
-            binding.textEqSpecWarn.visibility = View.INVISIBLE
+            binding.textEqSpecWarn.visibility = View.VISIBLE
+            binding.radioGroupEqSpec.background = getResources().getDrawable(R.drawable.cardview_background)
         }
+
+        if (isCatChecked && isSpecChecked) {
+            navigateToNext(selectedCatRadio, selectedSpecRadio)
+        }
+    }
+
+    fun navigateToNext(cat: Int, spec: Int) {
+            viewModel.setAnswers(Answer(true, cat, spec))
+            findNavController().navigate(R.id.action_ElemQuestionFragment_to_ElemFragment)
     }
 }

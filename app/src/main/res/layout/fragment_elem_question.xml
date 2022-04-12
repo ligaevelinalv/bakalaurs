@@ -50,7 +50,7 @@
 
             <RadioGroup
                 android:id="@+id/radio_group_eq_cat"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -65,7 +65,7 @@
                     android:textSize="16sp"
                     android:textStyle="bold"
                     android:visibility="gone"
-                    tools:text="BAD"
+                    android:text="Lūdzu izvēlieties kādu no atbildēm!"
                     tools:visibility="visible" />
 
                 <TextView
@@ -127,7 +127,7 @@
 
             <RadioGroup
                 android:id="@+id/radio_group_eq_spec"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent">
@@ -142,7 +142,7 @@
                     android:textColor="#EC4141"
                     android:textSize="16sp"
                     android:textStyle="bold"
-                    tools:text="BAD"
+                    android:text="Lūdzu izvēlieties kādu no atbildēm!"
                     tools:visibility="visible" />
 
                 <TextView
