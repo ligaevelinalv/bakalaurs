@@ -16,7 +16,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
 
     //ELEMENT CATEGORY//
-    <string name="e_cat">Cik viegli uztverams bija teksts, ko tikko izlasījāt?</string>
+    <string name="e_cat">Cik viegli uztverams bija elements, ko tikko aplūkojāt?</string>
     ----------------------------------------------
     <string name="e1_cat">Pilnībā uztverams</string>
     <string name="e2_cat">Drīzāk uztverams</string>
