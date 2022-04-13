@@ -1,12 +1,87 @@
 <resources>
     <style name="title_text">
         <item name = "android:textColor">@color/black</item>
-        <item name = "android:textSize">24dp</item>
+        <item name = "android:textSize">24sp</item>
         <item name = "android:textStyle">bold</item>
-        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:layout_marginTop">16dp</item>
     </style>
 
     <style name="button">
         <item name="backgroundTint">@color/button_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">60dp</item>
+        <item name="android:minWidth">200dp</item>
+        <item name="android:textSize">20sp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="main_text">
+        <item name="android:textSize">19sp</item>
+        <item name="android:lineSpacingExtra">8dp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+    </style>
+
+    <style name="cardview_view">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+
+    <style name="cardview_question">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">5dp</item>
+    </style>
+
+    <style name="text_in_card">
+        <item name="android:textSize">19sp</item>
+        <item name="android:lineSpacingExtra">10dp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">8dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="question">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">20sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <style name="warning">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/warning</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name = "android:textStyle">bold</item>
+        <item name="android:visibility">gone</item>
+        <item name="android:text">@string/lucu</item>
+    </style>
+
+    <style name="radio_button">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:textColor">@color/main_text_color</item>
+        <item name="android:textSize">18sp</item>
     </style>
 </resources>

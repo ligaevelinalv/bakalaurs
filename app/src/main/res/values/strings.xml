@@ -12,6 +12,9 @@
         Pēc elementa aplūkošanas vai darbības izpildīšanas atzīmējat,
         lūdzu, kura no piedāvātajām atbildēm Jūsuprāt ir visatbilstošākā.</string>
 
+    <string name="elements_1">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
+
     //ELEMENT CATEGORY//
     <string name="e_cat">Cik viegli uztverams bija teksts, ko tikko izlasījāt?</string>
     ----------------------------------------------
@@ -91,5 +94,9 @@
     <string name="h_a3">Neesmu pārlicināta/s</string>
     <string name="h_a4">Drīzāk nepietiekama</string>
     <string name="h_a5">Bija nepietiekama</string>
+    <string name="lucu">Lūdzu izvēlieties kādu no atbildēm!</string>
+    <string name="lorem_ipsum">Lorem ipsum</string>
+    <string name="vizu_l_s_uztveres_tests">Vizuālās uztveres tests</string>
+    <string name="sakt_testu">Sākt testu</string>
 
 </resources>
