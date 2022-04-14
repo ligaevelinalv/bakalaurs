@@ -36,6 +36,12 @@ class ElemFragment : Fragment() {
         text = "$text.elements"
         binding.textETitle.text = text
 
+        when (viewModel.getcurrentQuestion()) {
+            1 -> binding.cardViewElem1.visibility = View.VISIBLE
+            2 -> binding.cardViewElem2.visibility = View.VISIBLE
+            3 -> binding.cardViewElem3.visibility = View.VISIBLE
+        }
+
         binding.buttonENext.setOnClickListener {
 
             findNavController().navigate(R.id.action_ElemFragment_to_ElemQuestionFragment)
