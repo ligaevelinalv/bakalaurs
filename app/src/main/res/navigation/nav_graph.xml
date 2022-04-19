@@ -14,6 +14,9 @@
         <action
             android:id="@+id/action_StartFragment_to_ElemFragment"
             app:destination="@id/ElemFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_navTaskFragment"
+            app:destination="@id/navTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/ElemFragment"
@@ -59,9 +62,8 @@
         android:label="1.uzdevums"
         tools:layout="@layout/fragment_nav_clutter" >
         <action
-            android:id="@+id/action_navClutterFragment_to_navTaskFragment"
-            app:destination="@id/navTaskFragment"
-            app:popUpTo="@id/navTaskFragment" />
+            android:id="@+id/action_navClutterFragment_to_navEndFragment"
+            app:destination="@id/navEndFragment" />
     </fragment>
     <fragment
         android:id="@+id/navIconFragment"
@@ -69,9 +71,8 @@
         android:label="2.uzdevums"
         tools:layout="@layout/fragment_nav_icon" >
         <action
-            android:id="@+id/action_navIconFragment_to_navTaskFragment"
-            app:destination="@id/navTaskFragment"
-            app:popUpTo="@id/navTaskFragment" />
+            android:id="@+id/action_navIconFragment_to_navEndFragment"
+            app:destination="@id/navEndFragment" />
     </fragment>
     <fragment
         android:id="@+id/navScrollFragment"
@@ -90,6 +91,18 @@
         <action
             android:id="@+id/action_navEndFragment_to_navQuestionFragment"
             app:destination="@id/navQuestionFragment" />
+        <action
+            android:id="@+id/action_navEndFragment_to_navClutterFragment"
+            app:destination="@id/navClutterFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navEndFragment_to_navIconFragment"
+            app:destination="@id/navIconFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_navEndFragment_to_navQuestionFragment2"
+            app:destination="@id/navQuestionFragment"
+            app:popUpTo="@id/navQuestionFragment" />
     </fragment>
     <fragment
         android:id="@+id/navQuestionFragment"

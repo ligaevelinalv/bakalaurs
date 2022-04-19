@@ -33,7 +33,9 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSNext.setOnClickListener {
-            findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
+            //findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
+            viewModel.setCurrentQuestion(7)
+            findNavController().navigate(R.id.action_StartFragment_to_navTaskFragment)
         }
     }
 

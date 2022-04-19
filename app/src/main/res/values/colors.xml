@@ -13,4 +13,5 @@
     <color name="incard_button_color">#759188</color>
     <color name="top_color">#403F3F</color>
     <color name="main_text_color">#565651</color>
+    <color name="color_light">#B5B5B5</color>
 </resources>

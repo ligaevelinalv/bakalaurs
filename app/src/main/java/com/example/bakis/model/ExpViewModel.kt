@@ -36,6 +36,10 @@ class ExpViewModel : ViewModel() {
         return currentQuestion.value?.toInt()
     }
 
+    fun setCurrentQuestion(qNum: Int) {
+        currentQuestion.value = qNum
+    }
+
     fun getQuestion(type: Boolean): Int {
 
         var tempNum = 0
