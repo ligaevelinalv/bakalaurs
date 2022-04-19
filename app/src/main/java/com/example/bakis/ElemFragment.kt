@@ -41,11 +41,12 @@ class ElemFragment : Fragment() {
             2 -> binding.cardViewElem2.visibility = View.VISIBLE
             3 -> binding.cardViewElem3.visibility = View.VISIBLE
             4 -> binding.cardViewElem4.visibility = View.VISIBLE
+            5 -> binding.cardViewElem5.visibility = View.VISIBLE
+            6 -> binding.cardViewElem6.visibility = View.VISIBLE
         }
 
         binding.buttonENext.setOnClickListener {
-
-            findNavController().navigate(R.id.action_ElemFragment_to_ElemQuestionFragment)
+                findNavController().navigate(R.id.action_ElemFragment_to_ElemQuestionFragment)
         }
     }
 

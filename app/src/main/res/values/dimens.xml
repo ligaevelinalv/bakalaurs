@@ -19,6 +19,17 @@
         <item name="android:layout_height">wrap_content</item>
     </style>
 
+    <style name="button_in_card">
+        <item name="backgroundTint">@color/incard_button_color</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:minHeight">50dp</item>
+        <item name="android:minWidth">150dp</item>
+        <item name="android:textSize">18sp</item>
+        <item name="cornerRadius">6dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
     <style name="main_text">
         <item name="android:textSize">19sp</item>
         <item name="android:lineSpacingExtra">8dp</item>
@@ -28,9 +39,10 @@
     <style name="cardview_view">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:layout_marginStart">24dp</item>
-        <item name="android:layout_marginEnd">24dp</item>
+        <item name="android:layout_marginStart">32dp</item>
+        <item name="android:layout_marginEnd">32dp</item>
         <item name="android:layout_marginTop">24dp</item>
+        <item name="android:layout_marginBottom">32dp</item>
         <item name="cardCornerRadius">20dp</item>
         <item name="cardElevation">5dp</item>
     </style>
@@ -51,7 +63,7 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginTop">16dp</item>
-        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginStart">24dp</item>
         <item name="android:layout_marginEnd">8dp</item>
         <item name="android:layout_marginBottom">16dp</item>
         <item name="android:textAlignment">viewStart</item>

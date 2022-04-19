@@ -41,7 +41,7 @@
 
                 <TextView
                     style="@style/text_in_card"
-                    android:text="@string/elements_1" />
+                    android:text="@string/elements_noedit" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>
@@ -112,7 +112,93 @@
                     style="@style/text_in_card"
                     android:font="@font/courier_prime"
                     android:fontFamily="@font/courier_prime"
-                    android:text="@string/elements_4" />
+                    android:text="@string/elements_noedit" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_elem_5"
+            style="@style/cardview_view"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/button_e_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_elem_4"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_in_card"
+                    android:text="@string/elements_noedit" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_elem_6"
+            style="@style/cardview_view"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/button_e_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_elem_5"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="8dp"
+                    android:text="@string/elements_6_title"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    style="@style/text_in_card"
+                    android:text="@string/elements_6_1" />
+
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:adjustViewBounds="true"
+                    app:srcCompat="@drawable/q6_img"
+                    android:contentDescription="@string/image_of_roman_dude" />
+
+                <TextView
+                    style="@style/text_in_card"
+                    android:text="@string/elements_6_2" />
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:text="@string/lorem"
+                        style="@style/button_in_card"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="16dp"
+                        style="@style/button_in_card"
+                        android:text="@string/ipsum" />
 
             </LinearLayout>
         </androidx.cardview.widget.CardView>

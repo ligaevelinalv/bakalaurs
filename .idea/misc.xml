@@ -9,7 +9,7 @@
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/content_main.xml" value="0.39895833333333336" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_blank.xml" value="0.39895833333333336" />
-        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_elem.xml" value="0.33" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_elem.xml" value="0.25" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_elem_question.xml" value="0.18" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_end.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_first.xml" value="0.39895833333333336" />
@@ -36,5 +36,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.16" />
+      </ProjectState>
+    </option>
   </component>
 </project>

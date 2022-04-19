@@ -87,8 +87,8 @@ class ElemQuestionFragment : Fragment() {
 
         var selectedCatRadio = 0
         var selectedSpecRadio = 0
-        var selectedCat = binding.radioGroupEqCat.checkedRadioButtonId
-        var selectedSpec = binding.radioGroupEqSpec.checkedRadioButtonId
+        val selectedCat = binding.radioGroupEqCat.checkedRadioButtonId
+        val selectedSpec = binding.radioGroupEqSpec.checkedRadioButtonId
 
         if (selectedCat != -1) {
             when (selectedCat) {
@@ -123,6 +123,11 @@ class ElemQuestionFragment : Fragment() {
 
     fun navigateToNext(cat: Int, spec: Int) {
             viewModel.setAnswers(Answer(true, cat, spec))
+
+        if (viewModel.getcurrentQuestion() == 7) {
+            findNavController().navigate(R.id.action_ElemQuestionFragment_to_navTaskFragment)
+        } else {
             findNavController().navigate(R.id.action_ElemQuestionFragment_to_ElemFragment)
+        }
     }
 }

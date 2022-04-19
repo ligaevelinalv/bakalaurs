@@ -59,8 +59,9 @@
         android:label="1.uzdevums"
         tools:layout="@layout/fragment_nav_clutter" >
         <action
-            android:id="@+id/action_navClutterFragment_to_navEndFragment"
-            app:destination="@id/navEndFragment" />
+            android:id="@+id/action_navClutterFragment_to_navTaskFragment"
+            app:destination="@id/navTaskFragment"
+            app:popUpTo="@id/navTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/navIconFragment"
@@ -68,8 +69,9 @@
         android:label="2.uzdevums"
         tools:layout="@layout/fragment_nav_icon" >
         <action
-            android:id="@+id/action_navIconFragment_to_navEndFragment"
-            app:destination="@id/navEndFragment" />
+            android:id="@+id/action_navIconFragment_to_navTaskFragment"
+            app:destination="@id/navTaskFragment"
+            app:popUpTo="@id/navTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/navScrollFragment"
@@ -97,9 +99,6 @@
         <action
             android:id="@+id/action_navQuestionFragment_to_hapTaskFragment"
             app:destination="@id/hapTaskFragment" />
-        <action
-            android:id="@+id/action_navQuestionFragment_to_navTaskFragment"
-            app:destination="@id/navTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/hapTaskFragment"
