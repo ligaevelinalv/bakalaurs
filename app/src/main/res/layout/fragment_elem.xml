@@ -92,6 +92,31 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_elem_4"
+            style="@style/cardview_view"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/button_e_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_elem_3"
+            app:layout_constraintVertical_bias="0.0"
+            tools:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/text_in_card"
+                    android:font="@font/courier_prime"
+                    android:fontFamily="@font/courier_prime"
+                    android:text="@string/elements_4" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
         <Button
             android:id="@+id/button_e_next"
             style="@style/button"
