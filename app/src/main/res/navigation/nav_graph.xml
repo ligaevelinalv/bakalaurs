@@ -91,18 +91,6 @@
         <action
             android:id="@+id/action_navEndFragment_to_navQuestionFragment"
             app:destination="@id/navQuestionFragment" />
-        <action
-            android:id="@+id/action_navEndFragment_to_navClutterFragment"
-            app:destination="@id/navClutterFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_navEndFragment_to_navIconFragment"
-            app:destination="@id/navIconFragment"
-            app:popUpToInclusive="true" />
-        <action
-            android:id="@+id/action_navEndFragment_to_navQuestionFragment2"
-            app:destination="@id/navQuestionFragment"
-            app:popUpTo="@id/navQuestionFragment" />
     </fragment>
     <fragment
         android:id="@+id/navQuestionFragment"
@@ -111,7 +99,12 @@
         tools:layout="@layout/fragment_nav_question" >
         <action
             android:id="@+id/action_navQuestionFragment_to_hapTaskFragment"
-            app:destination="@id/hapTaskFragment" />
+            app:destination="@id/hapTaskFragment"
+            app:popUpTo="@id/hapTaskFragment" />
+        <action
+            android:id="@+id/action_navQuestionFragment_to_navTaskFragment"
+            app:destination="@id/navTaskFragment"
+            app:popUpTo="@id/navTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/hapTaskFragment"

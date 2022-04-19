@@ -31,10 +31,6 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-//        viewModel.question1.observe(this, Observer { item ->
-//            // Perform an action with the latest item data
-//        })
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -44,7 +40,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        //super.onBackPressed()
 
         val text = "No going back for you!"
         val duration = Toast.LENGTH_SHORT

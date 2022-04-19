@@ -40,11 +40,11 @@ class NavClutterFragment : Fragment() {
             9 -> uzdevums = "3.Uzdevums"
         }
 
-//        binding.titleNt.text = uzdevums
-//
-//        binding.buttonNtNext.setOnClickListener {
-//            findNavController().navigate(R.id.action_navTaskFragment_to_navClutterFragment)
-//        }
+        binding.titleNc.text = uzdevums
+
+        binding.buttonNc2.setOnClickListener {
+            findNavController().navigate(R.id.action_navClutterFragment_to_navEndFragment)
+        }
     }
 
     override fun onDestroyView() {

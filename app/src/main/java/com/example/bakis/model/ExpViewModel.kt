@@ -167,7 +167,7 @@ class ExpViewModel : ViewModel() {
 
         //specific
         if (!type) {
-            if (currQuest == 1) {
+            if (currQuest == 7) {
                 when (num) {
                     1 -> tempNum = R.string.n1_a1
                     2 -> tempNum = R.string.n1_a2
@@ -177,7 +177,7 @@ class ExpViewModel : ViewModel() {
                 }
             }
 
-            if (currQuest == 2 || currQuest == 3) {
+            if (currQuest == 8 || currQuest == 9) {
                 when (num) {
                     1 -> tempNum = R.string.n2_n3_a1
                     2 -> tempNum = R.string.n2_n3_a2
