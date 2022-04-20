@@ -34,9 +34,14 @@ class NavQuestionFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        var text = viewModel.getcurrentQuestion().toString()
-        text = "Jautājumi par $text.elementu"
+        var text = ""
+        when (viewModel.getcurrentQuestion()) {
+            7 -> text = "1"
+            8 -> text = "2"
+            9 -> text = "3"
+        }
 
+        text = "Jautājumi par $text.uzdevumu"
         binding.textNqTitle.text = text
 
         //category
@@ -63,14 +68,16 @@ class NavQuestionFragment : Fragment() {
             isCatChecked = true
 
             binding.textNqCatWarn.visibility = View.GONE
-            binding.radioGroupNqCat.background = getResources().getDrawable(R.drawable.cardview__no_background)
+            binding.radioGroupNqCat.background =
+                getResources().getDrawable(R.drawable.cardview__no_background)
         }
 
         binding.radioGroupNqSpec.setOnCheckedChangeListener { _, _ ->
             isSpecChecked = true
 
             binding.textNqSpecWarn.visibility = View.GONE
-            binding.radioGroupNqSpec.background = getResources().getDrawable(R.drawable.cardview__no_background)
+            binding.radioGroupNqSpec.background =
+                getResources().getDrawable(R.drawable.cardview__no_background)
         }
     }
 
@@ -88,28 +95,30 @@ class NavQuestionFragment : Fragment() {
 
         if (selectedCat != -1) {
             when (selectedCat) {
-                R.id.radio_eq_cat1 -> selectedCatRadio = 1
-                R.id.radio_eq_cat2 -> selectedCatRadio = 2
-                R.id.radio_eq_cat3 -> selectedCatRadio = 3
-                R.id.radio_eq_cat4 -> selectedCatRadio = 4
-                R.id.radio_eq_cat5 -> selectedCatRadio = 5
+                R.id.radio_nq_cat1 -> selectedCatRadio = 1
+                R.id.radio_nq_cat2 -> selectedCatRadio = 2
+                R.id.radio_nq_cat3 -> selectedCatRadio = 3
+                R.id.radio_nq_cat4 -> selectedCatRadio = 4
+                R.id.radio_nq_cat5 -> selectedCatRadio = 5
             }
         } else {
             binding.textNqCatWarn.visibility = View.VISIBLE
-            binding.radioGroupNqCat.background = getResources().getDrawable(R.drawable.cardview_background)
+            binding.radioGroupNqCat.background =
+                getResources().getDrawable(R.drawable.cardview_background)
         }
 
         if (selectedSpec != -1) {
             when (selectedSpec) {
-                R.id.radio_eq_spec1 -> selectedSpecRadio = 1
-                R.id.radio_eq_spec2 -> selectedSpecRadio = 2
-                R.id.radio_eq_spec3 -> selectedSpecRadio = 3
-                R.id.radio_eq_spec4 -> selectedSpecRadio = 4
-                R.id.radio_eq_spec5 -> selectedSpecRadio = 5
+                R.id.radio_nq_spec1 -> selectedSpecRadio = 1
+                R.id.radio_nq_spec2 -> selectedSpecRadio = 2
+                R.id.radio_nq_spec3 -> selectedSpecRadio = 3
+                R.id.radio_nq_spec4 -> selectedSpecRadio = 4
+                R.id.radio_nq_spec5 -> selectedSpecRadio = 5
             }
         } else {
             binding.textNqSpecWarn.visibility = View.VISIBLE
-            binding.radioGroupNqSpec.background = getResources().getDrawable(R.drawable.cardview_background)
+            binding.radioGroupNqSpec.background =
+                getResources().getDrawable(R.drawable.cardview_background)
         }
 
         if (isCatChecked && isSpecChecked) {
@@ -120,10 +129,18 @@ class NavQuestionFragment : Fragment() {
     fun navigateToNext(cat: Int, spec: Int) {
         viewModel.setAnswers(Answer(true, cat, spec))
 
-//        if (viewModel.getcurrentQuestion() == 7) {
-//            findNavController().navigate(R.id.action_ElemQuestionFragment_to_navTaskFragment)
-//        } else {
-            findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
-//        }
+        when (viewModel.getcurrentQuestion()) {
+            7 -> {
+                findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
+            }
+            8 -> {
+                findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
+            }
+            9 -> {
+                findNavController().navigate(R.id.action_navQuestionFragment_to_hapTaskFragment)
+            }
+        }
+
+
     }
 }
