@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="warning">#FB4444</color>
     <color name="button_color">#8381A3</color>
+    <color name="fab_color">#5045FD</color>
     <color name="toolbar_color">#646464</color>
     <color name="incard_button_color">#759188</color>
     <color name="top_color">#403F3F</color>

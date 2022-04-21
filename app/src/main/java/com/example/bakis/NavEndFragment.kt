@@ -31,7 +31,7 @@ class NavEndFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.titleNe.text = "Uzdevums pabeigts."
+        binding.titleNe.text = "Uzdevums izpildīts."
 
         binding.buttonNe.setOnClickListener {
             findNavController().navigate(R.id.action_navEndFragment_to_navQuestionFragment)

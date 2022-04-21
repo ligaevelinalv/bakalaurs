@@ -19,6 +19,7 @@
     <TextView
         android:id="@+id/title_ne"
         style="@style/nav_title"
+        android:textSize="30dp"
         android:layout_marginTop="128dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

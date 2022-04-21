@@ -4,6 +4,7 @@
     <string name="start_ex">Sākt uzdevumu</string>
     <string name="next">Tālāk</string>
     <string name="next_question">Nākamais elements</string>
+    <string name="next_task">Nākamais uzdevums</string>
 
     
     //ELEMENT STRINGS//
@@ -39,9 +40,9 @@
         Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</string>
 
     //NAV STRINGS//
-    <string name="nav_uzd_1">Izvēlies pogu, kas navigē uz nākamo rakstu</string>
-    <string name="nav_uzd_2">Navigē uz lietotāja profila skatu</string>
-    <string name="nav_uzd_3">Navigē uz nākamā raksta skatu</string>
+    <string name="nav_uzd_1">Izvēlies pogu, kas navigē uz nākamo rakstu.</string>
+    <string name="nav_uzd_2">Navigē uz lietotāja profila skatu.</string>
+    <string name="nav_uzd_3">Navigē uz nākamā raksta skatu.</string>
 
 
     //ELEMENT CATEGORY//

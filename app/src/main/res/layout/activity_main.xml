@@ -26,15 +26,17 @@
         android:id="@+id/floatingActionButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:fabSize="normal"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
-        android:backgroundTint="@color/button_color"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/fab_color"
+        app:borderWidth="0dp"
         android:clickable="true"
         android:contentDescription="@string/fab_ns"
         android:src="@drawable/next"
         android:visibility="gone"
-        app:fabSize="normal"
+        app:maxImageSize="45dp"
         app:tint="@color/white" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
