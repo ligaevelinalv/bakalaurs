@@ -93,8 +93,8 @@
     <string name="n1_h1_cat">Pilnībā uztverama</string>
     <string name="n2_h2_cat">Drīzāk uztverama</string>
     <string name="n3_h3_cat">Neesmu pārlicināta/s</string>
-    <string name="n4_h4_cat">Drīzāk uztverama</string>
-    <string name="n5_h5_cat">Pilnībā uztverama</string>
+    <string name="n4_h4_cat">Drīzāk neuztverama</string>
+    <string name="n5_h5_cat">Pilnībā neuztverama</string>
 
     <string name="n1_q">Vai bija viegli atrast pareizo navigācijas pogu?</string>
     ----------------------------------------------
@@ -109,7 +109,7 @@
     <string name="n2_n3_a1">Navigēt bija viegli</string>
     <string name="n2_n3_a2">Navigēt bija drīzāk viegli</string>
     <string name="n2_n3_a3">Neesmu pārlicināta/s</string>
-    <string name="n2_n3_a4">Navigēt bija drīzāk viegli</string>
+    <string name="n2_n3_a4">Navigēt bija drīzāk grūti</string>
     <string name="n2_n3_a5">Navigēt bija grūti</string>
 
     //HAPTIC CATEGORY//
@@ -130,5 +130,12 @@
     <string name="lorem">Lorem</string>
     <string name="ipsum">Ipsum</string>
     <string name="image_of_roman_dude">Image of Roman dude</string>
+    <string name="ni_text">Lai atvērtu kameras, mūzikas vai lietotāja profilu, spied uz ikonām, kas atrodas navigācijas joslā!</string>
+    <string name="ni_title">Esi sveicināts lietotnes sākumskatā!</string>
+    <string name="ni_profile">Mans profils</string>
+    <string name="ni_music">Mūzika</string>
+    <string name="ni_camera">Kamera</string>
+    <string name="s_kums">Sākums</string>
+    <string name="fab_ns">Next article</string>
 
 </resources>

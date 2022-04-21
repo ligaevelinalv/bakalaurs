@@ -129,14 +129,16 @@ class NavQuestionFragment : Fragment() {
     fun navigateToNext(cat: Int, spec: Int) {
         viewModel.setAnswers(Answer(true, cat, spec))
 
+        val isdf = viewModel.getcurrentQuestion()
+
         when (viewModel.getcurrentQuestion()) {
-            7 -> {
-                findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
-            }
             8 -> {
                 findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
             }
             9 -> {
+                findNavController().navigate(R.id.action_navQuestionFragment_to_navTaskFragment)
+            }
+            10 -> {
                 findNavController().navigate(R.id.action_navQuestionFragment_to_hapTaskFragment)
             }
         }

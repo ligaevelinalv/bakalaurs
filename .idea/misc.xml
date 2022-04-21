@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/camera.xml" value="0.341" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/home.xml" value="0.341" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/moon.xml" value="0.341" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/music.xml" value="0.341" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/next.xml" value="0.428" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/share.xml" value="0.24" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable-anydpi/user.xml" value="0.341" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable/cardview__no_background.xml" value="0.316" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable/cardview_background.xml" value="0.316" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/drawable/login_card.xml" value="0.402" />
@@ -21,9 +27,9 @@
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_hap_task.xml" value="0.5541666666666667" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_clutter.xml" value="0.33" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_end.xml" value="0.33" />
-        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_icon.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_icon.xml" value="0.16" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_question.xml" value="0.33" />
-        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_scroll.xml" value="0.5541666666666667" />
+        <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_scroll.xml" value="0.25" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_nav_task.xml" value="0.5" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_second.xml" value="0.39895833333333336" />
         <entry key="..\:/Users/Liga/Desktop/Bakalaurs/app/src/main/res/layout/fragment_start.xml" value="0.33" />

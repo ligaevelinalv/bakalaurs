@@ -32,27 +32,35 @@ class NavTaskFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val currQuest = viewModel.getcurrentQuestion()
-        when(currQuest) {
-            7 ->
-            {
+        when (currQuest) {
+            7 -> {
                 binding.titleNt.text = "1.Uzdevums"
                 binding.textNt.text = resources.getText(R.string.nav_uzd_1)
             }
 
-            8 ->
-            {
+            8 -> {
                 binding.titleNt.text = "2.Uzdevums"
                 binding.textNt.text = resources.getText(R.string.nav_uzd_2)
             }
-            9 ->
-            {
+            9 -> {
                 binding.titleNt.text = "3.Uzdevums"
                 binding.textNt.text = resources.getText(R.string.nav_uzd_3)
             }
         }
 
         binding.buttonNtNext.setOnClickListener {
-            findNavController().navigate(R.id.action_navTaskFragment_to_navClutterFragment)
+
+            when (viewModel.getcurrentQuestion()) {
+                7 -> {
+                    findNavController().navigate(R.id.action_navTaskFragment_to_navClutterFragment)
+                }
+                8 -> {
+                    findNavController().navigate(R.id.action_navTaskFragment_to_navIconFragment)
+                }
+                9 -> {
+                    findNavController().navigate(R.id.action_navTaskFragment_to_navScrollFragment)
+                }
+            }
         }
     }
 

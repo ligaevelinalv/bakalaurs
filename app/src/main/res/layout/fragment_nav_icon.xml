@@ -1,19 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".NavIconFragment">
 
-    <Button
-        android:id="@+id/button_ni_next"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/view_ni"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="@string/next"
+        android:background="@color/button_color"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/icon_ni_house"
+            style="@style/navbar"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/home"
+            app:layout_constraintEnd_toStartOf="@+id/icon_ni_camera"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="spread_inside"
+            app:layout_constraintStart_toStartOf="@id/view_ni"
+            app:layout_constraintTop_toTopOf="@+id/view_ni" />
+
+        <ImageView
+            android:id="@+id/icon_ni_camera"
+            style="@style/navbar"
+            android:src="@drawable/camera"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_ni_house"
+            app:layout_constraintEnd_toStartOf="@+id/icon_ni_note"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/icon_ni_house" />
+
+        <ImageView
+            android:id="@+id/icon_ni_note"
+            style="@style/navbar"
+            android:src="@drawable/music"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_ni_camera"
+            app:layout_constraintEnd_toStartOf="@+id/icon_ni_person"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/icon_ni_camera" />
+
+        <ImageView
+            android:id="@+id/icon_ni_person"
+            style="@style/navbar"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/user"
+            app:layout_constraintBottom_toBottomOf="@+id/icon_ni_note"
+            app:layout_constraintEnd_toEndOf="@id/view_ni"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/icon_ni_note" />
+
+        <TextView
+            android:id="@+id/text_ni_home"
+            style="@style/icon_text"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:text="@string/s_kums"
+            android:textColor="@color/color_lighter"
+            app:layout_constraintBottom_toBottomOf="@+id/view_ni"
+            app:layout_constraintEnd_toEndOf="@+id/icon_ni_house"
+            app:layout_constraintStart_toStartOf="@+id/icon_ni_house"
+            app:layout_constraintTop_toBottomOf="@+id/icon_ni_house"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_ni_camera"
+            style="@style/icon_text"
+            android:layout_marginTop="4dp"
+            android:text="@string/ni_camera"
+            app:layout_constraintEnd_toEndOf="@+id/icon_ni_camera"
+            app:layout_constraintStart_toStartOf="@+id/icon_ni_camera"
+            app:layout_constraintTop_toBottomOf="@+id/icon_ni_camera" />
+
+        <TextView
+            android:id="@+id/text_ni_music"
+            style="@style/icon_text"
+            android:layout_marginTop="4dp"
+            android:text="@string/ni_music"
+            app:layout_constraintBottom_toBottomOf="@+id/view_ni"
+            app:layout_constraintEnd_toEndOf="@+id/icon_ni_note"
+            app:layout_constraintStart_toStartOf="@+id/icon_ni_note"
+            app:layout_constraintTop_toBottomOf="@+id/icon_ni_note"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/text_ni_user"
+            style="@style/icon_text"
+            android:layout_marginTop="4dp"
+            android:text="@string/ni_profile"
+            app:layout_constraintBottom_toBottomOf="@+id/view_ni"
+            app:layout_constraintEnd_toEndOf="@+id/icon_ni_person"
+            app:layout_constraintStart_toStartOf="@+id/icon_ni_person"
+            app:layout_constraintTop_toBottomOf="@+id/icon_ni_person"
+            app:layout_constraintVertical_bias="0.0" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/nav_title"
+        android:layout_width="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/ni_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/nav_text"
+        android:layout_width="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/ni_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

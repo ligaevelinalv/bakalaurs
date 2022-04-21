@@ -34,7 +34,7 @@ class StartFragment : Fragment() {
 
         binding.buttonSNext.setOnClickListener {
             //findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
-            viewModel.setCurrentQuestion(7)
+            viewModel.setCurrentQuestion(9)
             findNavController().navigate(R.id.action_StartFragment_to_navTaskFragment)
         }
     }

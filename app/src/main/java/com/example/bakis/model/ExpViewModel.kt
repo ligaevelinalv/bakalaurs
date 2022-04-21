@@ -13,6 +13,8 @@ class ExpViewModel : ViewModel() {
         MutableLiveData<MutableList<Answer>>()
     }
 
+    val wasFabPressed = MutableLiveData(false)
+
     fun getAnswers(): MutableList<Answer>? {
         return answerList.value
     }

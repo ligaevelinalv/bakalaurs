@@ -80,7 +80,7 @@
         android:label="3.uzdevums"
         tools:layout="@layout/fragment_nav_scroll" >
         <action
-            android:id="@+id/action_navScrollFragment_to_navEndFragment2"
+            android:id="@+id/action_navScrollFragment_to_navEndFragment"
             app:destination="@id/navEndFragment" />
     </fragment>
     <fragment

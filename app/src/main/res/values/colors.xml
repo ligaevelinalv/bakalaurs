@@ -14,4 +14,5 @@
     <color name="top_color">#403F3F</color>
     <color name="main_text_color">#565651</color>
     <color name="color_light">#B5B5B5</color>
+    <color name="color_lighter">#D8D7D7</color>
 </resources>
