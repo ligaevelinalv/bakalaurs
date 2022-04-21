@@ -17,6 +17,9 @@
         <action
             android:id="@+id/action_StartFragment_to_navTaskFragment"
             app:destination="@id/navTaskFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_hapTaskFragment"
+            app:destination="@id/hapTaskFragment" />
     </fragment>
     <fragment
         android:id="@+id/ElemFragment"
@@ -146,5 +149,10 @@
         android:id="@+id/endFragment"
         android:name="com.example.bakis.EndFragment"
         android:label="Eksperiments pabeigts"
-        tools:layout="@layout/fragment_end" />
+        tools:layout="@layout/fragment_end" >
+        <action
+            android:id="@+id/action_endFragment_to_StartFragment"
+            app:destination="@id/StartFragment"
+            app:popUpTo="@id/StartFragment" />
+    </fragment>
 </navigation>

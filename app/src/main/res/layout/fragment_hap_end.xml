@@ -7,13 +7,23 @@
     tools:context=".HapEndFragment">
 
     <Button
-        android:id="@+id/button_he_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/button_he"
+        android:layout_marginTop="32dp"
         android:layout_marginBottom="32dp"
+        style="@style/button"
         android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/title_he"
+        style="@style/nav_title"
+        android:textSize="30dp"
+        android:layout_marginTop="128dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

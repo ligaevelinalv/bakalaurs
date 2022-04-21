@@ -1,6 +1,10 @@
 package com.example.bakis
 
+import android.content.Context
+import android.os.Build
 import android.os.Bundle
+import android.os.VibrationEffect
+import android.os.Vibrator
 import android.view.MenuItem
 import android.view.View
 import android.widget.Toast
@@ -74,6 +78,5 @@ class MainActivity : AppCompatActivity() {
             binding.floatingActionButton.visibility = View.GONE
         }
     }
-
 
 }

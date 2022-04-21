@@ -7,13 +7,39 @@
     tools:context=".HapTaskFragment">
 
     <Button
-        android:id="@+id/button_ht_next"
+        android:id="@+id/button_h_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="@string/next"
+        android:text="@string/start_ex"
+        style="@style/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_h"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/title_h"
+        style="@style/nav_title"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Title" />
+
+    <TextView
+        android:id="@+id/text_h"
+        style="@style/nav_text"
+        android:layout_width="0dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_h"
+        tools:text="Text text text text text text text text text text text text text text text text text text text" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

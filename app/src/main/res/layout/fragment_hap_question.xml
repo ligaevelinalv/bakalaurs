@@ -1,19 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".HapQuestionFragment">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/button_hq_next"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        tools:context=".HapQuestionFragment">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/button_hq_next"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/next_task"
+            style="@style/button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_hq_spec" />
+
+        <TextView
+            android:id="@+id/text_hq_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/title_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Title" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_hq_cat"
+            style="@style/cardview_question"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_hq_title">
+
+            <RadioGroup
+                android:id="@+id/radio_group_hq_cat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_hq_cat_warn"
+                    style="@style/warning"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_hq_catq"
+                    style="@style/question"
+                    tools:text="fssfdfsdsdfsdfsdfsdfsdfsdf" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_cat1"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_cat2"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_cat3"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_cat4"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_cat5"
+                    style="@style/radio_button"
+                    android:layout_marginBottom="8dp"
+                    tools:text="RadioButton" />
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_hq_spec"
+            style="@style/cardview_question"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/card_view_hq_cat">
+
+            <RadioGroup
+                android:id="@+id/radio_group_hq_spec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_hq_spec_warn"
+                    style="@style/warning"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/text_hq_specq"
+                    style="@style/question"
+                    tools:text="fssfdfsdsdfsdfsdfsdfsdfsdf" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_spec1"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_spec2"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_spec3"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_spec4"
+                    style="@style/radio_button"
+                    tools:text="RadioButton" />
+
+                <RadioButton
+                    android:id="@+id/radio_hq_spec5"
+                    style="@style/radio_button"
+                    android:layout_marginBottom="8dp"
+                    tools:text="RadioButton" />
+            </RadioGroup>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

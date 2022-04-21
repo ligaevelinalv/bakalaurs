@@ -142,7 +142,5 @@ class NavQuestionFragment : Fragment() {
                 findNavController().navigate(R.id.action_navQuestionFragment_to_hapTaskFragment)
             }
         }
-
-
     }
 }

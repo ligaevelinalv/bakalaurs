@@ -7,13 +7,40 @@
     tools:context=".EndFragment">
 
     <Button
-        android:id="@+id/button_e_next"
+        android:id="@+id/button_end_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="32dp"
-        android:text="@string/next"
+        android:text= "Beigt testu"
+        style="@style/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_end"
+        app:layout_constraintVertical_bias="1.0" />
 
+    <TextView
+        android:id="@+id/title_end"
+        style="@style/title_text"
+        android:layout_width="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="32dp"
+        android:text="Jūs esat atbildējusi/is uz visiem testa jautājumiem."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/text_end"
+        style="@style/main_text"
+        android:layout_width="0dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Paldies par dalību testā."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_end" />
 </androidx.constraintlayout.widget.ConstraintLayout>

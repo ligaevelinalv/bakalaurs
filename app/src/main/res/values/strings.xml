@@ -124,6 +124,7 @@
     <string name="h_a3">Neesmu pārlicināta/s</string>
     <string name="h_a4">Drīzāk nepietiekama</string>
     <string name="h_a5">Bija nepietiekama</string>
+
     <string name="lucu">Lūdzu izvēlieties kādu no atbildēm!</string>
     <string name="lorem_ipsum">Lorem ipsum</string>
     <string name="vizu_l_s_uztveres_tests">Vizuālās uztveres tests</string>
@@ -138,5 +139,7 @@
     <string name="ni_camera">Kamera</string>
     <string name="s_kums">Sākums</string>
     <string name="fab_ns">Next article</string>
+    <string name="uzdevums">Uzdevums</string>
+    <string name="spiest">Spiest</string>
 
 </resources>
