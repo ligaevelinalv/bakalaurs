@@ -10,6 +10,8 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bakis.databinding.FragmentStartBinding
 import com.example.bakis.model.ExpViewModel
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
 class StartFragment : Fragment() {
 
@@ -33,6 +35,12 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSNext.setOnClickListener {
+
+            // Write a message to the database
+            val database = Firebase.database
+            val myRef = database.getReference("message")
+
+            myRef.setValue("kms")
             findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
         }
     }
