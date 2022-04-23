@@ -1,6 +1,7 @@
 package com.example.bakis
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,6 +11,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.bakis.databinding.FragmentHapQuestionBinding
 import com.example.bakis.databinding.FragmentNavQuestionBinding
 import com.example.bakis.model.ExpViewModel
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.*
 
 class HapQuestionFragment : Fragment() {
     private var _binding: FragmentHapQuestionBinding? = null
@@ -21,12 +27,16 @@ class HapQuestionFragment : Fragment() {
     private var isCatChecked = false
     private var isSpecChecked = false
 
+    lateinit var database: DatabaseReference
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
 
         _binding = FragmentHapQuestionBinding.inflate(inflater, container, false)
+        database = Firebase.database.reference
+
         return binding.root
 
     }
@@ -87,11 +97,11 @@ class HapQuestionFragment : Fragment() {
 
         if (selectedCat != -1) {
             when (selectedCat) {
-                R.id.radio_nq_cat1 -> selectedCatRadio = 1
-                R.id.radio_nq_cat2 -> selectedCatRadio = 2
-                R.id.radio_nq_cat3 -> selectedCatRadio = 3
-                R.id.radio_nq_cat4 -> selectedCatRadio = 4
-                R.id.radio_nq_cat5 -> selectedCatRadio = 5
+                R.id.radio_hq_cat1 -> selectedCatRadio = 1
+                R.id.radio_hq_cat2 -> selectedCatRadio = 2
+                R.id.radio_hq_cat3 -> selectedCatRadio = 3
+                R.id.radio_hq_cat4 -> selectedCatRadio = 4
+                R.id.radio_hq_cat5 -> selectedCatRadio = 5
             }
         } else {
             binding.textHqCatWarn.visibility = View.VISIBLE
@@ -101,11 +111,11 @@ class HapQuestionFragment : Fragment() {
 
         if (selectedSpec != -1) {
             when (selectedSpec) {
-                R.id.radio_nq_spec1 -> selectedSpecRadio = 1
-                R.id.radio_nq_spec2 -> selectedSpecRadio = 2
-                R.id.radio_nq_spec3 -> selectedSpecRadio = 3
-                R.id.radio_nq_spec4 -> selectedSpecRadio = 4
-                R.id.radio_nq_spec5 -> selectedSpecRadio = 5
+                R.id.radio_hq_spec1 -> selectedSpecRadio = 1
+                R.id.radio_hq_spec2 -> selectedSpecRadio = 2
+                R.id.radio_hq_spec3 -> selectedSpecRadio = 3
+                R.id.radio_hq_spec4 -> selectedSpecRadio = 4
+                R.id.radio_hq_spec5 -> selectedSpecRadio = 5
             }
         } else {
             binding.textHqSpecWarn.visibility = View.VISIBLE
@@ -120,6 +130,41 @@ class HapQuestionFragment : Fragment() {
 
     fun navigateToNext(cat: Int, spec: Int) {
         viewModel.setAnswers(Answer(true, cat, spec))
+        sendToDB()
         findNavController().navigate(R.id.action_hapQuestionFragment_to_endFragment)
+    }
+
+    fun sendToDB() {
+        val answerList = viewModel.getAnswers()
+        val sdf = SimpleDateFormat("dd/M/yyyy HH:mm:ss", Locale.ITALY)
+        var currentDate = sdf.format(Date())
+        currentDate = currentDate.replace("/", "-")
+        Log.i("aaa", currentDate)
+        var counter = 1
+
+        if (answerList != null) {
+            for(answerObj in answerList) {
+                val pushAnswer = answerObj.toMap()
+
+                val childUpdates = hashMapOf<String, Any>(
+                    "/app1/$currentDate/$counter" to pushAnswer
+                )
+                database.updateChildren(childUpdates)
+                counter ++
+            }
+        }
+    }
+
+    fun generateData() {
+        viewModel.setAnswers(Answer(true, 1, 1))
+        viewModel.setAnswers(Answer(true, 2, 2))
+        viewModel.setAnswers(Answer(true, 3, 3))
+        viewModel.setAnswers(Answer(true, 4, 4))
+        viewModel.setAnswers(Answer(true, 5, 5))
+        viewModel.setAnswers(Answer(true, 6, 6))
+        viewModel.setAnswers(Answer(true, 7, 7))
+        viewModel.setAnswers(Answer(true, 8, 8))
+        viewModel.setAnswers(Answer(true, 9, 9))
+        viewModel.setAnswers(Answer(true, 10, 10))
     }
 }

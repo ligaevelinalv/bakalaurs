@@ -10,8 +10,11 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.example.bakis.databinding.FragmentStartBinding
 import com.example.bakis.model.ExpViewModel
+import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
+import java.text.SimpleDateFormat
+import java.util.*
 
 class StartFragment : Fragment() {
 
@@ -35,12 +38,8 @@ class StartFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.buttonSNext.setOnClickListener {
-
-            // Write a message to the database
-            val database = Firebase.database
-            val myRef = database.getReference("message")
-
-            myRef.setValue("kms")
+//            viewModel.setCurrentQuestion(10)
+//            findNavController().navigate(R.id.action_StartFragment_to_hapTaskFragment)
             findNavController().navigate(R.id.action_StartFragment_to_ElemFragment)
         }
     }
